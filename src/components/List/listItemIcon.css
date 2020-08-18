@@ -1,0 +1,5 @@
+.listItem__icon {
+  height: 60px;
+  width: 60px;
+  object-fit: contain;
+}
