@@ -13,7 +13,7 @@
     "react-scripts": "3.4.3"
   },
   "scripts": {
-    "dev": "json-server --watch db.json --port 6000",
+    "dev": "json-server --watch db.json --port 3333",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",

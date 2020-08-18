@@ -10,8 +10,8 @@ function Resources() {
     <main className="resources">
       <List>
         <ListItem>
-          <ListItemIcon />
-          <ListItemText primary="Text more text" />
+          <ListItemIcon imgSrc="https://cdn.icon-icons.com/icons2/2108/PNG/512/javascript_icon_130900.png" />
+          <ListItemText primary="Javascript Info" />
         </ListItem>
       </List>
     </main>

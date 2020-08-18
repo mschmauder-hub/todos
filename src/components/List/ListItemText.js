@@ -1,8 +1,9 @@
 import React from "react";
+import "./listItemText.css";
 
 const ListItemText = ({ primary, secondary }) => {
   return (
-    <div>
+    <div className="listItemText">
       <span>{primary}</span>
       <span>{secondary}</span>
     </div>
