@@ -1,3 +1,9 @@
 {
-  "todos": []
+  "resources": [
+    {
+      "id": 1,
+      "titel": "React Documentation",
+      "link": "https://reactjs.org/docs/getting-started.html"
+    }
+  ]
 }
