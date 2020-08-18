@@ -1,7 +1,8 @@
 import React from "react";
+import "./listItem.css";
 
-const ListItem = () => {
-  return <div className="listItem"></div>;
+const ListItem = ({ children }) => {
+  return <div className="listItem">{children}</div>;
 };
 
 export default ListItem;
