@@ -1,5 +1,5 @@
 .listItem {
   display: flex;
-  border: 1px solid red;
+  border-bottom: 1px solid rgb(209, 209, 209);
   align-items: center;
 }
