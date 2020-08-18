@@ -5,6 +5,15 @@ export async function getResources() {
   }
 
   const data = await response.json();
+  console.log(data);
 
   return data;
+}
+
+export async function addResource() {
+  fetch("http://localhost:3333/resources", {
+    method: "POST",
+    body: JSON.stringify({ title: "React new stuff" }),
+    headers: { "Content-Type": "application/json" },
+  });
 }
