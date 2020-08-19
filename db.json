@@ -17,16 +17,6 @@
       "title": "React Router",
       "link": "https://javascript.info/",
       "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/512px-React-icon.svg.png"
-    },
-    {
-      "title": "New React Resource",
-      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/512px-React-icon.svg.png",
-      "id": 4
-    },
-    {
-      "title": "Test",
-      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/512px-React-icon.svg.png",
-      "id": 5
     }
   ],
   "categories": [
