@@ -4,25 +4,23 @@ import List from "../components/List/List";
 import ListItem from "../components/List/ListItem";
 import ListItemText from "../components/List/ListItemText";
 import ListItemIcon from "../components/List/ListItemIcon";
-import { getResources, addResource } from "../api/resources";
+import { getResources } from "../api/resources";
 import { useHistory } from "react-router-dom";
 
 function Resources() {
   const [resources, setResources] = useState(null);
-  const [addResources, setAddResources] = useState(false);
 
   let history = useHistory();
+  async function getResourceList() {
+    const resources = await getResources();
+    setResources(resources);
+  }
   useEffect(() => {
-    async function getResourceList() {
-      const resources = await getResources();
-      setResources(resources);
-    }
     getResourceList();
-    // setAddResources(false);
-  }, [addResources]);
+  }, []);
 
   async function handleClick() {
-    // addResource().then(setAddResources(true));
+    // addResource().then(getResourceList());
     history.push("/add-resource");
   }
 

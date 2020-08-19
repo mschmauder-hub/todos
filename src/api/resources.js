@@ -10,10 +10,10 @@ export async function getResources() {
   return data;
 }
 
-export async function addResource() {
+export function addResource(newTitle) {
   fetch("http://localhost:3333/resources", {
     method: "POST",
-    body: JSON.stringify({ title: "React new stuff" }),
+    body: JSON.stringify({ title: newTitle }),
     headers: { "Content-Type": "application/json" },
   });
 }
