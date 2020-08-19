@@ -10,7 +10,6 @@ export async function getResources() {
 }
 
 export async function addResource(newTitle, category) {
-  console.log(category);
   const response = await fetch(`http://localhost:3333/categories/${category}`);
   const data = await response.json();
 
