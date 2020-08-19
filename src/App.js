@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Switch, Link, Route } from "react-router-dom";
 
 import "./App.css";
 import Resources from "./pages/Resources";
+import AddResource from "./pages/AddResourceScreen";
 
 function App() {
   return (
@@ -14,11 +15,13 @@ function App() {
           <Route path="/resources">
             <Resources />
           </Route>
-          <Route path="/others"></Route>
+          <Route path="/add-resource">
+            <AddResource />
+          </Route>
         </Switch>
         <footer>
           <Link to="/resources">Resources</Link>
-          <Link to="/others">Others</Link>
+          <Link to="/others"></Link>
         </footer>
       </div>
     </Router>
