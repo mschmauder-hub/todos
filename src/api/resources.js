@@ -5,15 +5,23 @@ export async function getResources() {
   }
 
   const data = await response.json();
-  console.log(data);
 
   return data;
 }
 
-export function addResource(newTitle) {
-  fetch("http://localhost:3333/resources", {
-    method: "POST",
-    body: JSON.stringify({ title: newTitle }),
-    headers: { "Content-Type": "application/json" },
-  });
+export async function addResource(newTitle, category) {
+  console.log(category);
+  const response = await fetch(`http://localhost:3333/categories/${category}`);
+  const data = await response.json();
+
+  if (category) {
+    fetch("http://localhost:3333/resources", {
+      method: "POST",
+      body: JSON.stringify({
+        title: newTitle,
+        img: data.img,
+      }),
+      headers: { "Content-Type": "application/json" },
+    });
+  }
 }

@@ -19,12 +19,9 @@ function Resources() {
     getResourceList();
   }, []);
 
-  async function handleClick() {
-    // addResource().then(getResourceList());
+  function handleClick() {
     history.push("/add-resource");
   }
-
-  console.log(resources);
 
   return (
     <main className="resources">
