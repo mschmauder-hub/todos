@@ -5,6 +5,11 @@
       "title": "Javascript Info",
       "link": "https://javascript.info/",
       "img": "https://cdn.icon-icons.com/icons2/2108/PNG/512/javascript_icon_130900.png"
+    },
+    {
+      "title": "Test",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/512px-React-icon.svg.png",
+      "id": 2
     }
   ],
   "categories": [

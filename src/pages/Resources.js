@@ -16,7 +16,6 @@ function Resources() {
   async function getResourceList() {
     const resources = await getResources();
     setResources(resources);
-    console.log("Set Resource");
   }
   useEffect(() => {
     getResourceList();
@@ -26,15 +25,13 @@ function Resources() {
     history.push("/add-resource");
   }
 
-  function handleDelete(resource) {
-    deleteResource(resource.id)
-      .then(getResourceList())
-      .then(console.log("get Resource"));
+  async function handleDelete(resource) {
+    await deleteResource(resource.id);
+    const newResources = resources.filter((r) => r.id !== resource.id);
+    setResources(newResources);
 
-    console.log("Test");
+    // getResourceList();
   }
-
-  console.log("Render");
 
   return (
     <main className="resources">
