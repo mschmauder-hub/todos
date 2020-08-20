@@ -6,12 +6,24 @@ import { addResource } from "../api/resources";
 const AddResource = () => {
   const [topic, setTopic] = useState("");
   const [resource, setResource] = useState("");
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(false);
 
   let history = useHistory();
 
   async function handleSubmit(event) {
+    setLoading(true);
     event.preventDefault();
-    await addResource(resource, topic);
+
+    setError(false);
+    try {
+      await addResource(resource, topic);
+    } catch (error) {
+      console.log(error);
+      setError(true);
+    }
+    setLoading(false);
+
     history.push("/resources");
   }
 
@@ -39,7 +51,11 @@ const AddResource = () => {
           value={resource}
           onChange={(event) => handleChange(event.target.value)}
         />
-        <input type="submit" value="Submit" />
+        <input
+          type="submit"
+          value="Submit"
+          disabled={!topic || !resource || loading}
+        />
       </form>
     </div>
   );
