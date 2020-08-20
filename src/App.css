@@ -5,3 +5,11 @@
   grid-template-rows: auto 1fr auto;
   background: grey;
 }
+
+.app__header {
+  padding: 10px;
+}
+
+footer {
+  padding: 10px;
+}

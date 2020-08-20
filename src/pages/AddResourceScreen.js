@@ -19,7 +19,6 @@ const AddResource = () => {
     try {
       await addResource(resource, topic);
     } catch (error) {
-      console.log(error);
       setError(true);
     }
     setLoading(false);

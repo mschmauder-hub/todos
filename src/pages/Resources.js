@@ -5,8 +5,10 @@ import ListItem from "../components/List/ListItem";
 import ListItemText from "../components/List/ListItemText";
 import ListItemIcon from "../components/List/ListItemIcon";
 import { getResources, deleteResource } from "../api/resources";
-import { useHistory } from "react-router-dom";
+import { useHistory, Link } from "react-router-dom";
 import ListItemButton from "../components/List/ListItemButton";
+import plusSrc from "../assets/plus.svg";
+import minusSrc from "../assets/minus.svg";
 
 function Resources() {
   const [resources, setResources] = useState(null);
@@ -29,8 +31,6 @@ function Resources() {
     await deleteResource(resource.id);
     const newResources = resources.filter((r) => r.id !== resource.id);
     setResources(newResources);
-
-    // getResourceList();
   }
 
   return (
@@ -47,7 +47,14 @@ function Resources() {
           </ListItem>
         ))}
       </List>
-      <button onClick={handleClick}>Add new resource</button>
+      <Link to="/add-resource">
+        <button onClick={handleClick} className="button">
+          <img className="button__image" src={plusSrc} alt="plus"></img>
+        </button>
+      </Link>
+      <button onClick={handleClick} className="button">
+        <img className="button__image" src={minusSrc} alt="plus"></img>
+      </button>
     </main>
   );
 }
